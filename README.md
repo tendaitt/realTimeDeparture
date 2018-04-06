@@ -20,6 +20,25 @@ Rest-based web service that provides the real-time departure time at a user-prov
 
 ## 5. Using the application
 
+Once the application is running or you go to the hosted location, you can use it by adding a `<stopTag>` value in the URL as illustrated below.
+
+### URL structure
+
+`http://<host>/getDepartureTime?stopTag=<stopTag>`
+
+### Sample URLs
+* Running application locally: http://localhost:8080/getDepartureTime?stopTag=4448
+* Running application on Heroku: https://ancient-chamber-53270.herokuapp.com/getDepartureTime?stopTag=4448
+
+### Sample Response
+`{"stopTitle":"Duboce Ave & Church St","direction":"Inbound to Caltrain/Ball Park","waitTime":2}`
+
+Fields:
+* `stopTitle`: the name of the stop.
+* `direction`: the direction of the bus.
+* `waitTime`: the time, in minutes, until the next bus arrives.
+
+
 
 ### Sample `<stopTags>`
 
