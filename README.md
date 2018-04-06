@@ -22,6 +22,7 @@ Rest-based web service that provides the real-time departure time at a user-prov
    `$ ./gradlew bootRun`
 
 * Application should be live at http://localhost:8080/
+
    _PS:_The page shown is a AngularJS page showing the result for a hard-coded stop.
 
 * To run in Eclipse omit the `bootRun` step and continue on to the following subsection.
