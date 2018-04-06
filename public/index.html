@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="demo">
+	<head>
+		<title>Departure Time Service</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="departure.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="DepartureInfo">
+			<p>The bus stop title is {{departureInfo.stopTitle}}</p>
+			<p>The bus direction is {{departureInfo.direction}}</p>
+			<p>The next bus arrives in {{departureInfo.waitTime}} minutes</p>
+		</div>
+	</body>
+</html>
