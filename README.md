@@ -23,15 +23,21 @@ Rest-based web service that provides the real-time departure time at a user-prov
 
 * Application should be live at http://localhost:8080/
 
-   _PS:_The page shown is a AngularJS page showing the result for a hard-coded stop.
+   **PS**:The page shown is a AngularJS page showing the result for a hard-coded stop.
 
 * To run in Eclipse omit the `bootRun` step and continue on to the following subsection.
 
 ### Importing into Eclipse
 * Generate eclipse dependencies
-   `./gradlew eclipse`
+   `$./gradlew eclipse`
 
-* Open Eclipse.
+* Open Eclipse.Go to **File->Import**
+
+* Under Gradle, select **Existing Gradle Project**
+
+* Complete the steps in the wizard and **Finish**
+
+* You will now be able to start the project in Eclipse by running the **src/main/java/com/assessment/departure/DepartureTimeApplication.java**
 
 ## 4. Hosted Location
 * Application is hosted on Heroku at the following location: https://ancient-chamber-53270.herokuapp.com/getDepartureTime?stopTag=5205
