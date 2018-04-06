@@ -2,9 +2,9 @@ package com.assessment.departure;
 
 public class DepartureInfo {
 	
-	public final String stopTitle;
-	public final String direction;
-	public final int waitTime;
+	private final String stopTitle;
+	private final String direction;
+	private final int waitTime;
 	
 	public DepartureInfo(String stopTitle, String direction, int waitTime) {
 		this.stopTitle = stopTitle;

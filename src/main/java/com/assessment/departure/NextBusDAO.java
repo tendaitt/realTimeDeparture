@@ -18,7 +18,7 @@ import org.xml.sax.SAXException;
 public class NextBusDAO {
 	
 	private static final Logger log = LoggerFactory.getLogger(NextBusDAO.class);
-	public final int stopTag;
+	private final int stopTag;
 
 	public NextBusDAO(int stopTag) {
 		this.stopTag = stopTag;
