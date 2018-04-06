@@ -9,10 +9,28 @@ Rest-based web service that provides the real-time departure time at a user-prov
 
 ## 3. Build & Run Instructions
 
-### CommandLine
+* Obtain repository from GitHub
+   `$ git clone https://github.com/tendaitt/realTimeDeparture.git`
 
+* Go into project directory
+   `$ cd realTimeDeparture/`
 
-### Eclipse
+* Build the project using `gradle`
+   `$ ./gradlew build -x test`
+
+* To run locally, execute the following command
+   `$ ./gradlew bootRun`
+
+* Application should be live at http://localhost:8080/
+   _PS:_The page shown is a AngularJS page showing the result for a hard-coded stop.
+
+* To run in Eclipse omit the `bootRun` step and continue on to the following subsection.
+
+### Importing into Eclipse
+* Generate eclipse dependencies
+   `./gradlew eclipse`
+
+* Open Eclipse.
 
 ## 4. Hosted Location
 * Application is hosted on Heroku at the following location: https://ancient-chamber-53270.herokuapp.com/getDepartureTime?stopTag=5205
@@ -22,15 +40,15 @@ Rest-based web service that provides the real-time departure time at a user-prov
 
 Once the application is running or you go to the hosted location, you can use it by adding a `<stopTag>` value in the URL as illustrated below.
 
-### URL structure
+#### URL structure
 
 `http://<host>/getDepartureTime?stopTag=<stopTag>`
 
-### Sample URLs
+#### Sample URLs
 * Running application locally: http://localhost:8080/getDepartureTime?stopTag=4448
 * Running application on Heroku: https://ancient-chamber-53270.herokuapp.com/getDepartureTime?stopTag=4448
 
-### Sample Response
+#### Sample Response
 `{"stopTitle":"Duboce Ave & Church St","direction":"Inbound to Caltrain/Ball Park","waitTime":2}`
 
 Fields:
@@ -40,7 +58,7 @@ Fields:
 
 
 
-### Sample `<stopTags>`
+#### Sample `<stopTags>`
 
 |      |      |      |
 |:----:|:----:|:----:|
