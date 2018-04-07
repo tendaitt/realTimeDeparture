@@ -92,10 +92,10 @@ Instead of merely returning the wait time, the application also retrieves the st
 
 ## 7. Trade-offs and Improvements
 
-####Trade-offs
+#### Trade-offs
 Since there is no geolocalization of the user, an alternative approach to retrieving the wait time had to be used. The application uses a prediction API, from Next Bus, that takes in a `<route tag>`, `<agency tag>` and `<stop tag>`. The route and agency are hard-coded while the user provides the stop tag.
 
-####TODOs
+#### TODOs
 * Add a fully functioning UI for the application.
 * Add integration testing and increase the number of unit tests for the application.
 * Implement geolocation functionality.
