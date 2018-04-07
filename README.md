@@ -1,11 +1,11 @@
 # realTimeDeparture
 A service that gives real-time departure time for public transportation
 
-## 1. Problem Statement:
+## 1. Problem Statement
 Create a service that gives real-time departure time for public transportation (use freely available public API). The app should geolocalize the user.
 
-## 2. Solution:
-Rest-based web service that provides the real-time departure time at a user-provided stop.
+## 2. Solution
+Rest-based web service that provides the real-time departure time at a user-provided stop. This service utilizes the Nextbus API.
 
 ## 3. Build & Run Instructions
 
@@ -70,7 +70,7 @@ Fields:
 * `direction`: the direction of the bus.
 * `waitTime`: the time, in minutes, until the next bus arrives.
 
-#### Sample `<stopTags>`
+#### Sample `<stopTag>`
 
 |      |      |      |
 |:----:|:----:|:----:|
@@ -81,24 +81,25 @@ Fields:
 ## 6. Technical Decisions
 
 #### Missing functionality
- * Application does not geolocalize the user to provide the result. Instead it takes a user input for a stop and returns the wait time. This feature was not implemented partly because the Next Bus API does not have a prediction request that takes in a Longitude and Latitude.
+ * Application does not geolocalize the user to provide the result. Instead it takes a user input for a stop and returns the wait time. This feature was not implemented partly because the Nextbus API does not have a prediction request that takes in a Longitude and Latitude.
 
 #### Additional Feature
 Instead of merely returning the wait time, the application also retrieves the stop title and direction of the bus.
 
 #### Architecture
 * The decision to implement the application as a REST-based web service was largely due to familiarity with the technology.
-* The application also models a Service Oriented Architecture. This ensures that we can easily replace components such as the Next Bus API with minimal code changes.
+* The application also models a Service Oriented Architecture. This ensures that we can easily replace components such as the Nextbus API with minimal code changes.
 
 ## 7. Trade-offs and Improvements
 
 #### Trade-offs
-Since there is no geolocalization of the user, an alternative approach to retrieving the wait time had to be used. The application uses a prediction API, from Next Bus, that takes in a `<route tag>`, `<agency tag>` and `<stop tag>`. The route and agency are hard-coded while the user provides the stop tag.
+Since there is no geolocalization of the user, an alternative approach to retrieving the wait time had to be used. The application uses a prediction API call, from Nextbus, that takes in a `<route tag>`, `<agency tag>` and `<stop tag>`. The route and agency are hard-coded while the user provides the stop tag.
 
 #### TODOs
 * Add a fully functioning UI for the application.
 * Add integration testing and increase the number of unit tests for the application.
 * Implement geolocation functionality.
+* Handle the scenario where the Nextbus API is down or it does not return the expected value.
 
 ## 8. Personal Links
 * [LinkedIn](https://www.linkedin.com/in/tendaimudyiwa/) 
