@@ -44,6 +44,8 @@ Rest-based web service that provides the real-time departure time at a user-prov
 
 * You will now be able to start the project in Eclipse by running the **src/main/java/com/assessment/departure/DepartureTimeApplication.java**
 
+* Application should be live at http://localhost:8080/
+
 ## 4. Hosted Location
 * Application is hosted on Heroku at the following location: https://ancient-chamber-53270.herokuapp.com/getDepartureTime?stopTag=5205
 * The GitHub repository is at the following location: https://github.com/tendaitt/realTimeDeparture
