@@ -10,15 +10,19 @@ Rest-based web service that provides the real-time departure time at a user-prov
 ## 3. Build & Run Instructions
 
 * Obtain repository from GitHub
+
    `$ git clone https://github.com/tendaitt/realTimeDeparture.git`
 
 * Go into project directory
+
    `$ cd realTimeDeparture/`
 
 * Build the project using `gradle`
+
    `$ ./gradlew build -x test`
 
 * To run locally, execute the following command
+
    `$ ./gradlew bootRun`
 
 * Application should be live at http://localhost:8080/
@@ -29,6 +33,7 @@ Rest-based web service that provides the real-time departure time at a user-prov
 
 ### Importing into Eclipse
 * Generate eclipse dependencies
+
    `$./gradlew eclipse`
 
 * Open Eclipse.Go to **File->Import**
