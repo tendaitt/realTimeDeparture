@@ -4,9 +4,9 @@ public class DepartureInfo {
 	
 	private final String stopTitle;
 	private final String direction;
-	private final int waitTime;
+	private final String waitTime;
 	
-	public DepartureInfo(String stopTitle, String direction, int waitTime) {
+	public DepartureInfo(String stopTitle, String direction, String waitTime) {
 		this.stopTitle = stopTitle;
 		this.direction = direction;
 		this.waitTime = waitTime;
@@ -20,7 +20,7 @@ public class DepartureInfo {
 		return direction;
 	}
 	
-	public int getWaitTime() {
+	public String getWaitTime() {
 		return waitTime;
 	}
 

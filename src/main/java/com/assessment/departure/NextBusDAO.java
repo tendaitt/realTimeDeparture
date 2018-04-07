@@ -38,7 +38,7 @@ public class NextBusDAO {
 				
 			String stopTitle = xpath.evaluate("/body/predictions/@stopTitle", doc);
 			String direction = xpath.evaluate("/body/predictions/direction/@title", doc);
-			int waitTime = Integer.parseInt(xpath.evaluate("/body/predictions/direction/prediction[1]/@minutes", doc));
+			String waitTime = xpath.evaluate("/body/predictions/direction/prediction[1]/@minutes", doc);
 			
 			log.info("Departure Info obtained. StopTitle: {}, Direction: {}, WaitTime in minutes: {}", stopTitle, direction, waitTime);
 			
