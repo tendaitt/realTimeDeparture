@@ -70,6 +70,8 @@ Fields:
 * `direction`: the direction of the bus.
 * `waitTime`: the time, in minutes, until the next bus arrives.
 
+**PS** If the direction and waitTime are empty, there are no available predictions for departure at that time.
+
 #### Sample `<stopTag>`
 
 |      |      |      |
