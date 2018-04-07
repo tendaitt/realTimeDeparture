@@ -42,7 +42,7 @@ Rest-based web service that provides the real-time departure time at a user-prov
 
 * Complete the steps in the wizard and **Finish**
 
-* You will now be able to start the project in Eclipse by running the **src/main/java/com/assessment/departure/DepartureTimeApplication.java**
+* You will now be able to start the project in Eclipse by running the **src/main/java/com/assessment/departure/DepartureTimeApplication.java** class.
 
 * Application should be live at http://localhost:8080/
 
@@ -70,8 +70,6 @@ Fields:
 * `direction`: the direction of the bus.
 * `waitTime`: the time, in minutes, until the next bus arrives.
 
-
-
 #### Sample `<stopTags>`
 
 |      |      |      |
@@ -82,11 +80,25 @@ Fields:
 
 ## 6. Technical Decisions
 
+#### Missing functionality
+ * Application does not geolocalize the user to provide the result. Instead it takes a user input for a stop and returns the wait time. This feature was not implemented partly because the Next Bus API does not have a prediction request that takes in a Longitude and Latitude.
 
+#### Additional Feature
+Instead of merely returning the wait time, the application also retrieves the stop title and direction of the bus.
+
+#### Architecture
+* The decision to implement the application as a REST-based web service was largely due to familiarity with the technology.
+* The application also models a Service Oriented Architecture. This ensures that we can easily replace components such as the Next Bus API with minimal code changes.
 
 ## 7. Trade-offs and Improvements
 
+####Trade-offs
+Since there is no geolocalization of the user, an alternative approach to retrieving the wait time had to be used. The application uses a prediction API, from Next Bus, that takes in a `<route tag>`, `<agency tag>` and `<stop tag>`. The route and agency are hard-coded while the user provides the stop tag.
 
+####TODOs
+* Add a fully functioning UI for the application.
+* Add integration testing and increase the number of unit tests for the application.
+* Implement geolocation functionality.
 
 ## 8. Personal Links
 * [LinkedIn](https://www.linkedin.com/in/tendaimudyiwa/) 
